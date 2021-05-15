@@ -348,14 +348,15 @@ var LOCALSTORAGE_ID='retroarchPlaylistEditorSettings';
 var settings={
 	settingsVersion:1,
 	corePaths:[
+		'~/.var/app/org.libretro.RetroArch/config/retroarch/cores/*_libretro.so', //flatpak
+		'~/.config/retroarch/cores/*_libretro.so', //Linux
 		'c:\\retroarch\\cores\\*_libretro.dll', //Windows
 		'/Applications/RetroArch.app/Contents/Resources/cores/*_libretro.dylib', //Mac
-		'~/.config/retroarch/cores/*_libretro.so', //Linux
 		'/data/data/com.retroarch/cores/*_libretro_android.so', //Android
 		'app0:/*_libretro.self', //Vita
 		'sd:/retroarch/cores/*_libretro.rpx' //Wii U
 	],
-	selectedCorePath:'c:\\retroarch\\cores\\*_libretro.dll'
+	selectedCorePath:'~/.var/app/org.libretro.RetroArch/config/retroarch/cores/*_libretro.so'
 };
 function deleteSettings(){localStorage.removeItem(LOCALSTORAGE_ID)}
 
